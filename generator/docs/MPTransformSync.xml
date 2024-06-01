@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MPTransformSync" inherits="MPSyncBase">
+	<brief_description>
+		Network Transform Synchronizer
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_on_player_connected">
+			<return type="void" />
+			<param index="0" name="plr" type="MPPlayer" />
+			<description>
+			</description>
+		</method>
+		<method name="_physics_process">
+			<return type="void" />
+			<param index="0" name="delta" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_recv_transform">
+			<return type="void" />
+			<param index="0" name="field" type="String" />
+			<param index="1" name="set_to" type="Variant" default="null" />
+			<param index="2" name="is_server_cmd" type="Variant" default="false" />
+			<description>
+			</description>
+		</method>
+		<method name="_recv_transform_reliable">
+			<return type="void" />
+			<param index="0" name="field" type="String" />
+			<param index="1" name="set_to" type="Variant" default="null" />
+			<param index="2" name="is_server_cmd" type="Variant" default="false" />
+			<description>
+			</description>
+		</method>
+		<method name="set_position_2d">
+			<return type="void" />
+			<param index="0" name="to" type="Vector2" />
+			<description>
+				Set position of the 2D node, Server only.
+			</description>
+		</method>
+		<method name="set_position_3d">
+			<return type="void" />
+			<param index="0" name="to" type="Vector3" />
+			<description>
+				Set position of the 3D node, Server only.
+			</description>
+		</method>
+		<method name="set_rotation_2d">
+			<return type="void" />
+			<param index="0" name="to" type="float" />
+			<description>
+				Set rotation of the 2D node, Server only.
+			</description>
+		</method>
+		<method name="set_rotation_3d">
+			<return type="void" />
+			<param index="0" name="to" type="Vector3" />
+			<description>
+				Set rotation of the 3D node, Server only.
+			</description>
+		</method>
+		<method name="set_scale_2d">
+			<return type="void" />
+			<param index="0" name="to" type="Vector2" />
+			<description>
+				Set scale of the 2D node, Server only.
+			</description>
+		</method>
+		<method name="set_scale_3d">
+			<return type="void" />
+			<param index="0" name="to" type="Vector3" />
+			<description>
+				Set scale of the 3D node, Server only.
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="_net_position" type="Variant" setter="" getter="" default="null">
+		</member>
+		<member name="_net_rotation" type="Variant" setter="" getter="" default="null">
+		</member>
+		<member name="_net_scale" type="Variant" setter="" getter="" default="null">
+		</member>
+		<member name="_old_position" type="Variant" setter="" getter="" default="null">
+		</member>
+		<member name="_old_rotation" type="Variant" setter="" getter="" default="null">
+		</member>
+		<member name="_old_scale" type="Variant" setter="" getter="" default="null">
+		</member>
+		<member name="_parent" type="Variant" setter="" getter="" default="null">
+		</member>
+		<member name="_sync_type" type="Variant" setter="" getter="" default="&quot;&quot;">
+		</member>
+		<member name="lerp_enabled" type="bool" setter="" getter="" default="true">
+			Enable lerp for sync?
+		</member>
+		<member name="lerp_speed" type="int" setter="" getter="" default="20">
+			Determines lerp speed
+		</member>
+		<member name="position_sensitivity" type="float" setter="" getter="" default="0.01">
+			Determines the sync sensitivity of position
+		</member>
+		<member name="rotation_sensitivity" type="float" setter="" getter="" default="0.01">
+			Determines the sync sensitivity of rotation
+		</member>
+		<member name="scale_sensitivity" type="float" setter="" getter="" default="0.01">
+			Determines the sync sensitivity of scale
+		</member>
+		<member name="sync_position" type="bool" setter="" getter="" default="true">
+			Determines if position will be sync
+		</member>
+		<member name="sync_rotation" type="bool" setter="" getter="" default="true">
+			Determines if rotation will be sync
+		</member>
+		<member name="sync_scale" type="bool" setter="" getter="" default="false">
+			Determines if scale will be sync
+		</member>
+	</members>
+</class>

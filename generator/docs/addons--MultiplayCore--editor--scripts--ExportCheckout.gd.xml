@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;addons/MultiplayCore/editor/scripts/ExportCheckout.gd&quot;" inherits="EditorExportPlugin">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_export_begin">
+			<return type="void" />
+			<param index="0" name="features" type="Variant" />
+			<param index="1" name="is_debug_build" type="Variant" />
+			<param index="2" name="path" type="Variant" />
+			<param index="3" name="flags" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_export_end">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_export_file">
+			<return type="void" />
+			<param index="0" name="path" type="Variant" />
+			<param index="1" name="type" type="Variant" />
+			<param index="2" name="features" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_get_name">
+			<return type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="add_post_log">
+			<return type="void" />
+			<param index="0" name="title" type="Variant" />
+			<param index="1" name="logs" type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="is_debug" type="Variant" setter="" getter="" default="false">
+		</member>
+		<member name="post_build_log" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+	</members>
+</class>

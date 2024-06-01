@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;tests/PlayerMovement.gd&quot;" inherits="CharacterBody2D">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_on_handshake_ready">
+			<return type="void" />
+			<param index="0" name="hs" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_player_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_swap_focused">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_swap_unfocused">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_physics_process">
+			<return type="void" />
+			<param index="0" name="delta" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="gravity" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="mpp" type="MPPlayer" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="on_ground" type="Variant" setter="" getter="" default="false">
+		</member>
+	</members>
+	<constants>
+		<constant name="SPEED" value="300.0">
+		</constant>
+		<constant name="JUMP_VELOCITY" value="-400.0">
+		</constant>
+	</constants>
+</class>

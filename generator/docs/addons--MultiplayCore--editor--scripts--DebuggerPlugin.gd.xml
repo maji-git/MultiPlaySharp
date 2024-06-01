@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;addons/MultiplayCore/editor/scripts/DebuggerPlugin.gd&quot;" inherits="EditorDebuggerPlugin">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_capture">
+			<return type="void" />
+			<param index="0" name="message" type="Variant" />
+			<param index="1" name="data" type="Variant" />
+			<param index="2" name="session_id" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_has_capture">
+			<return type="Variant" />
+			<param index="0" name="prefix" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_setup_session">
+			<return type="void" />
+			<param index="0" name="session_id" type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="send_start_auto" type="Variant" setter="" getter="" default="false">
+		</member>
+		<member name="start_auto_i" type="Variant" setter="" getter="" default="0">
+		</member>
+	</members>
+</class>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="ENetProtocol" inherits="MPNetProtocolBase">
+	<brief_description>
+		Websocket Network Protocol
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_apply_peer_config">
+			<return type="void" />
+			<param index="0" name="peer" type="ENetMultiplayerPeer" />
+			<param index="1" name="address" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="host">
+			<return type="MultiplayerPeer" />
+			<param index="0" name="port" type="Variant" />
+			<param index="1" name="bind_ip" type="Variant" />
+			<param index="2" name="max_players" type="Variant" />
+			<description>
+				Host function
+			</description>
+		</method>
+		<method name="join">
+			<return type="MultiplayerPeer" />
+			<param index="0" name="address" type="Variant" />
+			<param index="1" name="port" type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="bandwidth_in_limit" type="int" setter="" getter="" default="0">
+			Bandwidth In Limit
+		</member>
+		<member name="bandwidth_out_limit" type="int" setter="" getter="" default="0">
+			Bandwidth Out Limit
+		</member>
+		<member name="compression_mode" type="int" setter="" getter="" enum="ENetConnection.CompressionMode" default="3">
+			Set ENet host compression mode
+		</member>
+		<member name="role" type="Variant" setter="" getter="" default="&quot;&quot;">
+		</member>
+		<member name="secure" type="bool" setter="" getter="">
+			Specify if you needs encryption in your ENet
+		</member>
+		<member name="server_private_key" type="CryptoKey" setter="" getter="">
+			Secure Private key for server
+		</member>
+		<member name="ssl_certificate" type="X509Certificate" setter="" getter="">
+			Trusted SSL certificate for server &amp; client
+		</member>
+	</members>
+</class>

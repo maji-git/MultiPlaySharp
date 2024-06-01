@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MPAnimTreeSync" inherits="MPSyncBase">
+	<brief_description>
+		Network Animation Tree Synchronizer
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_physics_process">
+			<return type="void" />
+			<param index="0" name="delta" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_recv_oneshot_anim">
+			<return type="void" />
+			<param index="0" name="property_path" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="_recv_play_anim_nsmp">
+			<return type="void" />
+			<param index="0" name="property_path" type="String" />
+			<param index="1" name="travel_to" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="_recv_prop_sync">
+			<return type="void" />
+			<param index="0" name="property_path" type="String" />
+			<param index="1" name="value" type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="_parent" type="AnimationTree" setter="" getter="" default="null">
+		</member>
+		<member name="property_list" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+	</members>
+</class>

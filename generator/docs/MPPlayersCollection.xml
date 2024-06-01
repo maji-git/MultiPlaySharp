@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MPPlayersCollection" inherits="MPBase">
+	<brief_description>
+		Collection of players
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_internal_add_player">
+			<return type="void" />
+			<param index="0" name="player_id" type="Variant" />
+			<param index="1" name="player" type="MPPlayer" />
+			<description>
+			</description>
+		</method>
+		<method name="_internal_ping">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_internal_remove_player">
+			<return type="void" />
+			<param index="0" name="player_id" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="despawn_node_all">
+			<return type="void" />
+			<description>
+				Despawn all player's node
+			</description>
+		</method>
+		<method name="get_player_by_id">
+			<return type="MPPlayer" />
+			<param index="0" name="player_id" type="int" />
+			<description>
+				Get player by ID
+			</description>
+		</method>
+		<method name="get_player_by_index">
+			<return type="MPPlayer" />
+			<param index="0" name="player_index" type="int" />
+			<description>
+				Get player by index
+			</description>
+		</method>
+		<method name="get_players">
+			<return type="Dictionary" />
+			<description>
+				Get all players
+			</description>
+		</method>
+		<method name="respawn_node_all">
+			<return type="void" />
+			<description>
+				Respawn all player's node
+			</description>
+		</method>
+		<method name="spawn_node_all">
+			<return type="void" />
+			<description>
+				Spawn all player's node
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="players" type="Dictionary" setter="" getter="" default="&lt;unknown&gt;">
+			Dictionary containing [MPPlayer]
+		</member>
+	</members>
+</class>

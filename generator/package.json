@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bbcode-to-markdown": "^1.0.3",
+    "change-case": "^5.4.4",
+    "fast-xml-parser": "^4.3.6",
+    "get-all-files": "^5.0.0"
+  }
+}

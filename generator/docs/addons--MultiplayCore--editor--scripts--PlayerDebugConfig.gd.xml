@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;addons/MultiplayCore/editor/scripts/PlayerDebugConfig.gd&quot;" inherits="Node">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_process">
+			<return type="void" />
+			<param index="0" name="delta" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="apply_configs">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="load_data">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="read_config_file">
+			<return type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="credentials_edit" type="TextEdit" setter="" getter="">
+		</member>
+		<member name="handshake_edit" type="TextEdit" setter="" getter="">
+		</member>
+		<member name="session_id" type="Variant" setter="" getter="" default="0">
+		</member>
+	</members>
+</class>

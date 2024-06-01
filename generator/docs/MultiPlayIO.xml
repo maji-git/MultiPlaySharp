@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MultiPlayIO" inherits="MPBase">
+	<brief_description>
+		Input/Output Singleton for MultiPlay
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="logdata">
+			<return type="void" />
+			<param index="0" name="data" type="Variant" />
+			<description>
+				Log data to the output console
+			</description>
+		</method>
+		<method name="logerr">
+			<return type="void" />
+			<param index="0" name="data" type="Variant" />
+			<description>
+				Log errpr to the output console
+			</description>
+		</method>
+		<method name="logwarn">
+			<return type="void" />
+			<param index="0" name="data" type="Variant" />
+			<description>
+				Log warning to the output console
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="mpc" type="MultiPlayCore" setter="" getter="" default="null">
+			Main MultiPlay Core
+		</member>
+		<member name="plr_id" type="int" setter="" getter="" default="0">
+		</member>
+	</members>
+</class>

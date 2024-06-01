@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MultiPlayCore" inherits="MPBase">
+	<brief_description>
+		Core of everything MultiPlay
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_check_if_net_from_id">
+			<return type="Variant" />
+			<param index="0" name="id" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_check_join_internal">
+			<return type="Variant" />
+			<param index="0" name="handshake_data" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_client_connect_failed">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_client_connected">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_client_disconnected">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_debugger_msg_capture">
+			<return type="Variant" />
+			<param index="0" name="msg" type="Variant" />
+			<param index="1" name="data" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_find_key">
+			<return type="Variant" />
+			<param index="0" name="dictionary" type="Variant" />
+			<param index="1" name="value" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_get_configuration_warnings">
+			<return type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_handshake_disconnect_peer">
+			<return type="void" />
+			<param index="0" name="reason" type="int" enum="MultiPlayCore.ConnectionError" />
+			<description>
+			</description>
+		</method>
+		<method name="_init_data">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_internal_recv_net_data">
+			<return type="void" />
+			<param index="0" name="data" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_join_handshake">
+			<return type="void" />
+			<param index="0" name="handshake_data" type="Dictionary" />
+			<param index="1" name="credentials_data" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_kick_player_handshake">
+			<return type="void" />
+			<param index="0" name="plr_id" type="int" />
+			<param index="1" name="reason" type="int" enum="MultiPlayCore.ConnectionError" />
+			<description>
+			</description>
+		</method>
+		<method name="_net_broadcast_new_player">
+			<return type="void" />
+			<param index="0" name="peer_id" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_net_broadcast_remove_player">
+			<return type="void" />
+			<param index="0" name="peer_id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="_net_load_scene">
+			<return type="void" />
+			<param index="0" name="scene_path" type="String" />
+			<param index="1" name="respawn_players" type="Variant" default="true" />
+			<description>
+			</description>
+		</method>
+		<method name="_network_player_connected">
+			<return type="void" />
+			<param index="0" name="player_id" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_network_player_disconnected">
+			<return type="void" />
+			<param index="0" name="player_id" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_local_disconnected">
+			<return type="void" />
+			<param index="0" name="reason" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_local_player_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_online_host">
+			<return type="void" />
+			<param index="0" name="act_client" type="bool" default="false" />
+			<param index="1" name="act_client_handshake_data" type="Dictionary" default="&lt;unknown&gt;" />
+			<param index="2" name="act_client_credentials_data" type="Dictionary" default="&lt;unknown&gt;" />
+			<description>
+			</description>
+		</method>
+		<method name="_online_join">
+			<return type="void" />
+			<param index="0" name="address" type="String" />
+			<param index="1" name="handshake_data" type="Dictionary" default="&lt;unknown&gt;" />
+			<param index="2" name="credentials_data" type="Dictionary" default="&lt;unknown&gt;" />
+			<description>
+			</description>
+		</method>
+		<method name="_physics_process">
+			<return type="void" />
+			<param index="0" name="delta" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_player_spawned">
+			<return type="Variant" />
+			<param index="0" name="data" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_presetup_nodes">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_report_extension">
+			<return type="void" />
+			<param index="0" name="ext" type="MPExtension" />
+			<description>
+			</description>
+		</method>
+		<method name="_setup_nodes">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_tool_child_refresh_warns">
+			<return type="void" />
+			<param index="0" name="new_child" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_unhandled_input">
+			<return type="void" />
+			<param index="0" name="event" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="create_player">
+			<return type="void" />
+			<param index="0" name="player_id" type="Variant" />
+			<param index="1" name="handshake_data" type="Variant" default="&lt;unknown&gt;" />
+			<description>
+				Create player node
+			</description>
+		</method>
+		<method name="load_scene">
+			<return type="void" />
+			<param index="0" name="scene_path" type="String" />
+			<param index="1" name="respawn_players" type="Variant" default="true" />
+			<description>
+				Load scene for all players
+			</description>
+		</method>
+		<method name="start_one_screen">
+			<return type="void" />
+			<description>
+				Start one screen mode
+			</description>
+		</method>
+		<method name="start_online_host">
+			<return type="void" />
+			<param index="0" name="act_client" type="bool" default="false" />
+			<param index="1" name="act_client_handshake_data" type="Dictionary" default="&lt;unknown&gt;" />
+			<param index="2" name="act_client_credentials_data" type="Dictionary" default="&lt;unknown&gt;" />
+			<description>
+				Start online mode as host
+			</description>
+		</method>
+		<method name="start_online_join">
+			<return type="void" />
+			<param index="0" name="url" type="String" />
+			<param index="1" name="handshake_data" type="Dictionary" default="&lt;unknown&gt;" />
+			<param index="2" name="credentials_data" type="Dictionary" default="&lt;unknown&gt;" />
+			<description>
+				Start online mode as client
+			</description>
+		</method>
+		<method name="start_solo">
+			<return type="void" />
+			<description>
+				Start solo mode
+			</description>
+		</method>
+		<method name="start_swap">
+			<return type="void" />
+			<description>
+				Start swap mode
+			</description>
+		</method>
+		<method name="swap_increment">
+			<return type="void" />
+			<description>
+				Swap control to player according to index. Swap mode only
+			</description>
+		</method>
+		<method name="swap_to">
+			<return type="void" />
+			<param index="0" name="index" type="Variant" />
+			<description>
+				Specifically Swap to index. Swap mode only
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="_debug_bootui" type="Variant" setter="" getter="" default="null">
+		</member>
+		<member name="_debug_join_address" type="Variant" setter="" getter="" default="&quot;&quot;">
+		</member>
+		<member name="_extensions" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_join_credentials_data" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_join_handshake_data" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_net_data" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_net_protocol" type="MPNetProtocolBase" setter="" getter="" default="null">
+		</member>
+		<member name="_plr_spawner" type="MultiplayerSpawner" setter="" getter="">
+		</member>
+		<member name="assign_client_authority" type="bool" setter="" getter="" default="true">
+			Should Client authority be assigned automatically?
+		</member>
+		<member name="bind_address" type="String" setter="" getter="" default="&quot;*&quot;">
+			Which ip to bind on in online game host.
+		</member>
+		<member name="connect_timeout_ms" type="int" setter="" getter="" default="50000">
+			Time in milliseconds before timing out the user.
+		</member>
+		<member name="current_scene" type="Node" setter="" getter="" default="null">
+			Current scene node
+		</member>
+		<member name="current_swap_index" type="int" setter="" getter="" default="0">
+			Current swap index, Swap mode only.
+		</member>
+		<member name="debug_gui_enabled" type="bool" setter="" getter="" default="true">
+			Enable Debug UI
+		</member>
+		<member name="debug_status_txt" type="Variant" setter="" getter="" default="&quot;&quot;">
+			Debug Status
+		</member>
+		<member name="first_scene" type="PackedScene" setter="" getter="">
+			The first scene to load
+		</member>
+		<member name="is_server" type="bool" setter="" getter="" default="false">
+			Determines if MultiPlay is running as server
+		</member>
+		<member name="local_player" type="MPPlayer" setter="" getter="" default="null">
+			The local player node
+		</member>
+		<member name="max_players" type="int" setter="" getter="" default="2">
+			Max players for the game.
+		</member>
+		<member name="mode" type="int" setter="" getter="" enum="MultiPlayCore.PlayMode" default="0">
+			Current playmode
+		</member>
+		<member name="online_connected" type="bool" setter="" getter="" default="false">
+			If connected in online mode
+		</member>
+		<member name="online_peer" type="MultiplayerPeer" setter="" getter="" default="null">
+			MultiplayerPeer for the game
+		</member>
+		<member name="player_count" type="int" setter="" getter="" default="0">
+			Current player count
+		</member>
+		<member name="player_node_ready" type="bool" setter="" getter="" default="false">
+			If player node is ready
+		</member>
+		<member name="player_scene" type="PackedScene" setter="" getter="">
+			Your own template player scene.
+		</member>
+		<member name="players" type="MPPlayersCollection" setter="" getter="">
+			Players Collection
+		</member>
+		<member name="port" type="int" setter="" getter="" default="4200">
+			Which port to use in online game host.
+		</member>
+		<member name="started" type="bool" setter="" getter="" default="false">
+			Determines if MultiPlay has started
+		</member>
+		<member name="swap_input_action" type="String" setter="@swap_input_action_setter" getter="@swap_input_action_getter">
+			Which action key to use for swap mode.
+		</member>
+	</members>
+	<signals>
+		<signal name="connected_to_server">
+			<param index="0" name="localplayer" type="MPPlayer" />
+			<description>
+				Emit when client has connected to the server, Only emit locally.
+			</description>
+		</signal>
+		<signal name="connection_error">
+			<param index="0" name="reason" type="int" enum="MultiPlayCore.ConnectionError" />
+			<description>
+				Emit when client faced connection error
+			</description>
+		</signal>
+		<signal name="disconnected_from_server">
+			<param index="0" name="reason" type="String" />
+			<description>
+				Emit when client has disconnected from the server, Only emit locally.
+			</description>
+		</signal>
+		<signal name="player_connected">
+			<param index="0" name="player" type="MPPlayer" />
+			<description>
+				Emit when new player is connected to the server, Emit to all players in the server.
+			</description>
+		</signal>
+		<signal name="player_disconnected">
+			<param index="0" name="player" type="MPPlayer" />
+			<description>
+				Emit when player has disconnected from the server, Emit to all players in the server.
+			</description>
+		</signal>
+		<signal name="scene_loaded">
+			<description>
+				On network scene loaded
+			</description>
+		</signal>
+		<signal name="swap_changed">
+			<param index="0" name="to_index" type="int" />
+			<param index="1" name="old_index" type="int" />
+			<description>
+				Emit when swap index has changed. Only emit in Swap Play mode
+			</description>
+		</signal>
+	</signals>
+	<constants>
+		<constant name="MP_VERSION" value="&quot;1.0.0&quot;">
+			MultiPlay Core Version
+		</constant>
+		<constant name="MP_VERSION_NAME" value="&quot;Envelope Puppet&quot;">
+			MultiPlay Core Version Name
+		</constant>
+		<constant name="Online" value="0" enum="PlayMode">
+			Network enabled multiplayer
+		</constant>
+		<constant name="OneScreen" value="1" enum="PlayMode">
+			Single screen multiplayer. User can play with multiple controllers/devices.
+		</constant>
+		<constant name="Swap" value="2" enum="PlayMode">
+			Swap mode. Intended to be played with one player, user can switch to the peer they wanted to control.
+		</constant>
+		<constant name="Solo" value="3" enum="PlayMode">
+			Solo, self explanatory
+		</constant>
+		<constant name="UNKNOWN" value="0" enum="ConnectionError">
+			Unknown reason
+		</constant>
+		<constant name="SERVER_FULL" value="1" enum="ConnectionError">
+			The server's full
+		</constant>
+		<constant name="AUTH_FAILED" value="2" enum="ConnectionError">
+			Authentication Failure
+		</constant>
+		<constant name="TIMEOUT" value="3" enum="ConnectionError">
+			Connection timed out
+		</constant>
+		<constant name="CONNECTION_FAILURE" value="4" enum="ConnectionError">
+			Failure during connection
+		</constant>
+		<constant name="INVALID_HANDSHAKE" value="5" enum="ConnectionError">
+			Internal handshake data cannot be readed by the server
+		</constant>
+		<constant name="VERSION_MISMATCH" value="6" enum="ConnectionError">
+			Client's Multiplay version is not compatible with the server
+		</constant>
+	</constants>
+</class>

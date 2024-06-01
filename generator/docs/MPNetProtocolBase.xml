@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MPNetProtocolBase" inherits="MPExtension">
+	<brief_description>
+		Base Class for all network protocols
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="host">
+			<return type="MultiplayerPeer" />
+			<param index="0" name="port" type="Variant" />
+			<param index="1" name="bind_ip" type="Variant" />
+			<param index="2" name="max_players" type="Variant" />
+			<description>
+				Host function
+			</description>
+		</method>
+		<method name="join">
+			<return type="MultiplayerPeer" />
+			<param index="0" name="address" type="Variant" />
+			<param index="1" name="port" type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="net_protocols" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+	</members>
+</class>

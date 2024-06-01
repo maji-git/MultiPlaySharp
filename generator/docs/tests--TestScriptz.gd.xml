@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;tests/TestScriptz.gd&quot;" inherits="Node2D">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_on_multiplay_core_player_connected">
+			<return type="void" />
+			<param index="0" name="player" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_multiplay_core_player_disconnected">
+			<return type="void" />
+			<param index="0" name="player" type="MPPlayer" />
+			<description>
+			</description>
+		</method>
+		<method name="_process">
+			<return type="void" />
+			<param index="0" name="delta" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="mpc" type="MultiPlayCore" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="oz" type="Variant" setter="" getter="" default="1">
+		</member>
+	</members>
+</class>

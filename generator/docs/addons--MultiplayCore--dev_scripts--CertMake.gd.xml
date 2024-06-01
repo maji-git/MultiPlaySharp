@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;addons/MultiplayCore/dev_scripts/CertMake.gd&quot;" inherits="Node">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="run" qualifiers="static">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+	</methods>
+</class>

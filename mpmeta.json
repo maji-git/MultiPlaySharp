@@ -1,0 +1,28 @@
+{
+	"title": "MultiPlay Extension",
+	"author": "you",
+	"category_id": "1",
+	"godot_version": "4.2",
+	"mpc_version": "1.0",
+	"support_level": "official",
+	"cost": "MIT",
+	"version": "1",
+	"version_string": "alpha",
+	"icon_url": "https://raw.githubusercontent.com/...",
+	"description": "Your Description Here",
+	"download_branch": "master",
+	"previews": [
+		{
+			"preview_id": "1",
+			"type": "video",
+			"link": "https://www.youtube.com/watch?v=…",
+			"thumbnail": "https://img.youtube.com/vi/…/default.jpg"
+		},
+		{
+			"preview_id": "2",
+			"type": "image",
+			"link": "https://….png",
+			"thumbnail": "https://….png"
+		}
+	]
+}

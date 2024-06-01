@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;addons/MultiplayCore/editor/scripts/UpdatePopup.gd&quot;" inherits="Node">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_on_http_request_request_completed">
+			<return type="void" />
+			<param index="0" name="result" type="Variant" />
+			<param index="1" name="response_code" type="Variant" />
+			<param index="2" name="headers" type="Variant" />
+			<param index="3" name="body" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_update_button_pressed">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="anim_apply_status">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="check_updates">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="set_status">
+			<return type="void" />
+			<param index="0" name="txt" type="Variant" />
+			<param index="1" name="color" type="Variant" default="Color(0.960784, 0.960784, 0.960784, 1)" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="current_version" type="Label" setter="" getter="">
+		</member>
+		<member name="download_commit_hash" type="Variant" setter="" getter="" default="&quot;&quot;">
+		</member>
+		<member name="download_url" type="Variant" setter="" getter="" default="&quot;&quot;">
+		</member>
+		<member name="http_request" type="HTTPRequest" setter="" getter="">
+		</member>
+		<member name="label_clr_to_set" type="Variant" setter="" getter="" default="Color(1, 1, 1, 1)">
+		</member>
+		<member name="label_to_set" type="Variant" setter="" getter="" default="&quot;&quot;">
+		</member>
+		<member name="main_title" type="Label" setter="" getter="">
+		</member>
+		<member name="request_step" type="Variant" setter="" getter="" default="&quot;&quot;">
+		</member>
+		<member name="slidetxt_anim_play" type="AnimationPlayer" setter="" getter="">
+		</member>
+		<member name="status_label" type="Label" setter="" getter="">
+		</member>
+		<member name="update_btn" type="Button" setter="" getter="">
+		</member>
+		<member name="update_progress_bar" type="ProgressBar" setter="" getter="">
+		</member>
+	</members>
+</class>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="LatencyNetProtocol" inherits="ENetProtocol">
+	<brief_description>
+		Network Protocol for simulating network latency, based on ENet/UDP. Intended for debuging purposes.
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_process">
+			<return type="void" />
+			<param index="0" name="_delta" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="_process_queue">
+			<return type="void" />
+			<param index="0" name="que" type="LatencyNetProtocol.QueueEntry[]" />
+			<param index="1" name="to_peer" type="PacketPeerUDP" />
+			<param index="2" name="send_at_ms" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="host">
+			<return type="MultiplayerPeer" />
+			<param index="0" name="port" type="Variant" />
+			<param index="1" name="bind_ip" type="Variant" />
+			<param index="2" name="max_players" type="Variant" />
+			<description>
+				Host function
+			</description>
+		</method>
+		<method name="join">
+			<return type="MultiplayerPeer" />
+			<param index="0" name="address" type="Variant" />
+			<param index="1" name="port" type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="_client_to_server_queue" type="LatencyNetProtocol.QueueEntry[]" setter="" getter="">
+		</member>
+		<member name="_server_to_client_queue" type="LatencyNetProtocol.QueueEntry[]" setter="" getter="">
+		</member>
+		<member name="_true_server_port" type="Variant" setter="" getter="" default="-1">
+		</member>
+		<member name="_vclient_peer" type="PacketPeerUDP" setter="" getter="">
+		</member>
+		<member name="_virtual_port" type="Variant" setter="" getter="" default="-1">
+		</member>
+		<member name="_vserver_first_client_port" type="int" setter="" getter="" default="-1">
+		</member>
+		<member name="_vserver_has_dest_address" type="bool" setter="" getter="" default="false">
+		</member>
+		<member name="_vserver_peer" type="PacketPeerUDP" setter="" getter="">
+		</member>
+		<member name="simulate_latency_ms" type="int" setter="" getter="" default="100">
+			Simulate Network Latency in Microseconds
+		</member>
+		<member name="simulate_loss" type="float" setter="" getter="" default="0.0">
+			Simulate Chance of Network Loss
+		</member>
+	</members>
+</class>

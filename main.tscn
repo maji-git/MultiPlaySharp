@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bah4jkruvyc1l"]
+
+[ext_resource type="Script" path="res://addons/MultiplayCore/MultiPlay.gd" id="1_3wjfw"]
+[ext_resource type="Script" path="res://addons/MultiplayCore/net_protocols/ENetProtocol.gd" id="2_isxbt"]
+[ext_resource type="PackedScene" uid="uid://bvfsljiavtprd" path="res://player.tscn" id="2_wnxs8"]
+[ext_resource type="Script" path="res://Test.cs" id="3_uldto"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhyhp"]
+size = Vector2(1181, 20)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MultiPlayCore" type="Node" parent="."]
+script = ExtResource("1_3wjfw")
+port = 6942
+player_scene = ExtResource("2_wnxs8")
+
+[node name="ENetProtocol" type="Node" parent="MultiPlayCore"]
+script = ExtResource("2_isxbt")
+
+[node name="Node" type="Node" parent="MultiPlayCore"]
+script = ExtResource("3_uldto")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MultiPlayCore"]
+position = Vector2(0, 646)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MultiPlayCore/StaticBody2D"]
+position = Vector2(580.5, 0)
+shape = SubResource("RectangleShape2D_hhyhp")

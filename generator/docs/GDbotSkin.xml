@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="GDbotSkin" inherits="Node3D">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_set_walk_run_blending">
+			<return type="void" />
+			<param index="0" name="value" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="fall">
+			<return type="void" />
+			<description>
+				Sets the model to a downward animation, imitating a fall.
+			</description>
+		</method>
+		<method name="idle">
+			<return type="void" />
+			<description>
+				Sets the model to a neutral, action-free state.
+			</description>
+		</method>
+		<method name="jump">
+			<return type="void" />
+			<description>
+				Sets the model to an upward-leaping animation, simulating a jump.
+			</description>
+		</method>
+		<method name="set_face">
+			<return type="void" />
+			<param index="0" name="face_name" type="Variant" />
+			<description>
+				Changes the model's facial expression based on the provided input string values. Possible expressions include "default" (for default blinking), "happy" (for a joyful expression), "dizzy" (for spiraling eyes), and "sleepy" (for a drowsy countenance). [br][b]Note:[/b] To add new expressions, you can edit gdbot_face.tscn, which is a 2D scene utilized by a viewport node to display on Gdbot's face.
+			</description>
+		</method>
+		<method name="walk">
+			<return type="void" />
+			<description>
+				Sets the model to a walking or running animation or forward movement.
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="_animation_tree" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_face" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_main_state_machine" type="AnimationNodeStateMachinePlayback" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_walk_run_blend_position" type="String" setter="" getter="" default="&quot;parameters/StateMachine/Walk/blend_position&quot;">
+		</member>
+		<member name="walk_run_blending" type="Variant" setter="_set_walk_run_blending" getter="" default="0.0">
+			Represents the blending between the walking and running animations. It can be set to different values (e.g. 0.0 to 1.0) to adjust the balance between the two animations, resulting in the model appearing to walk or run depending on the value.
+		</member>
+	</members>
+</class>

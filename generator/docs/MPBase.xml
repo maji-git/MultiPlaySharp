@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MPBase" inherits="Node">
+	<brief_description>
+		Base for MultiPlay Nodes
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+</class>

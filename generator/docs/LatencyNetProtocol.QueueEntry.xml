@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="LatencyNetProtocol.QueueEntry" inherits="RefCounted">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_init">
+			<return type="void" />
+			<param index="0" name="packet" type="PackedByteArray" />
+			<param index="1" name="time_now" type="int" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="byte_array" type="PackedByteArray" setter="" getter="">
+		</member>
+		<member name="qued_at" type="int" setter="" getter="">
+		</member>
+	</members>
+</class>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MPExtension" inherits="MPBase">
+	<brief_description>
+		Base for MultiPlay Extensions
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_enter_tree">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_get_configuration_warnings">
+			<return type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="mpc" type="MultiPlayCore" setter="" getter="">
+			Main MultiPlayCore node
+		</member>
+	</members>
+</class>

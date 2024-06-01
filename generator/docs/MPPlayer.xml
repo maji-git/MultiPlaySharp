@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MPPlayer" inherits="MPBase">
+	<brief_description>
+		MultiPlay Player Node
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_check_if_net_from_id">
+			<return type="Variant" />
+			<param index="0" name="id" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_get_handshake_data">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_internal_ping">
+			<return type="void" />
+			<param index="0" name="server_time" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="_net_despawn">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_net_kick">
+			<return type="void" />
+			<param index="0" name="reason" type="String" default="&quot;&quot;" />
+			<description>
+			</description>
+		</method>
+		<method name="_net_spawn_node">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_handshake_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_swap_changed">
+			<return type="void" />
+			<param index="0" name="new" type="Variant" />
+			<param index="1" name="old" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_recv_handshake_data">
+			<return type="void" />
+			<param index="0" name="hs" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_send_handshake_data">
+			<return type="void" />
+			<param index="0" name="data" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="despawn_node">
+			<return type="void" />
+			<description>
+				Despawn player node, Server only.
+			</description>
+		</method>
+		<method name="disconnect_player">
+			<return type="void" />
+			<description>
+				Disconnect the player, this is intended for local use.
+			</description>
+		</method>
+		<method name="kick">
+			<return type="void" />
+			<param index="0" name="reason" type="String" default="&quot;&quot;" />
+			<description>
+				Kick the player, Server only.
+			</description>
+		</method>
+		<method name="ma">
+			<return type="Variant" />
+			<param index="0" name="action_name" type="StringName" />
+			<description>
+				Just like translate_action, but in shorter format
+			</description>
+		</method>
+		<method name="respawn_node">
+			<return type="void" />
+			<description>
+				Respawn player node, Server only.
+			</description>
+		</method>
+		<method name="spawn_node">
+			<return type="void" />
+			<description>
+				Spawn player node, Server only.
+			</description>
+		</method>
+		<method name="translate_action">
+			<return type="StringName" />
+			<param index="0" name="origin_action" type="StringName" />
+			<description>
+				Translate input action to the intended ones.  In Online/Solo, it'll return the same input action name[br]In One Screen, it'll return new input action, each assigned to it's own device index.[br]In Swap, if swap is active on this player, it'll return the same input action name. If not, it'll return the "empty" action.[br]
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="_initcount" type="Variant" setter="" getter="" default="20">
+		</member>
+		<member name="_internal_peer" type="MultiplayerPeer" setter="" getter="">
+		</member>
+		<member name="_local_got_handshake" type="Variant" setter="" getter="" default="false">
+		</member>
+		<member name="auth_data" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+			Authentication Data
+		</member>
+		<member name="handshake_data" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+			Handshake data
+		</member>
+		<member name="is_local" type="bool" setter="" getter="" default="false">
+			Determines if this player is local
+		</member>
+		<member name="is_ready" type="bool" setter="" getter="" default="false">
+			Determines if this player network is ready
+		</member>
+		<member name="is_swap_focused" type="bool" setter="" getter="" default="false">
+			Determines if swap is focusing this player, Swap mode only.
+		</member>
+		<member name="mpc" type="MultiPlayCore" setter="" getter="">
+			Get MultiPlayCore
+		</member>
+		<member name="ping_ms" type="int" setter="" getter="">
+			Ping in ms
+		</member>
+		<member name="player_id" type="int" setter="" getter="" default="0">
+			ID of the player
+		</member>
+		<member name="player_index" type="int" setter="" getter="" default="0">
+			Determines the player index, not to be confused with player_id.
+		</member>
+		<member name="player_node" type="Node" setter="" getter="">
+			The player node created from the template, see [member MultiPlayCore.player_scene]
+		</member>
+		<member name="player_node_resource_path" type="String" setter="" getter="" default="&quot;&quot;">
+			The resource path of the template player.
+		</member>
+	</members>
+	<signals>
+		<signal name="handshake_ready">
+			<param index="0" name="handshake_data" type="Dictionary" />
+			<description>
+				On handshake data is ready. Emit to all players
+			</description>
+		</signal>
+		<signal name="player_ready">
+			<description>
+				On player ready. Only emit locally
+			</description>
+		</signal>
+		<signal name="swap_focused">
+			<param index="0" name="old_swap" type="MPPlayer" />
+			<description>
+				On swap focused, Swap mode only
+			</description>
+		</signal>
+		<signal name="swap_unfocused">
+			<param index="0" name="new_swap" type="MPPlayer" />
+			<description>
+				On swap unfocused, Swap mode only
+			</description>
+		</signal>
+	</signals>
+</class>

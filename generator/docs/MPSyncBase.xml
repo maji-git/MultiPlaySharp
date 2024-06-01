@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MPSyncBase" inherits="MPBase">
+	<brief_description>
+		Base class of Network Synchronizers
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="check_is_local">
+			<return type="Variant" />
+			<description>
+				If this node is local to current multiplayer peer
+			</description>
+		</method>
+		<method name="check_recv_permission">
+			<return type="Variant" />
+			<param index="0" name="is_server_cmd" type="bool" default="false" />
+			<description>
+				Check receive permission
+			</description>
+		</method>
+		<method name="check_send_permission">
+			<return type="Variant" />
+			<description>
+				Check network send permission
+			</description>
+		</method>
+		<method name="should_sync">
+			<return type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+</class>

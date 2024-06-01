@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MPAnimationSync" inherits="MPSyncBase">
+	<brief_description>
+		Network Animation Synchronizer
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_on_animation_started">
+			<return type="void" />
+			<param index="0" name="new_anim" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_recv_play_anim">
+			<return type="void" />
+			<param index="0" name="anim_name" type="String" />
+			<param index="1" name="anim_speed" type="Variant" default="1.0" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="_net_current_animation" type="Variant" setter="" getter="" default="&quot;&quot;">
+		</member>
+		<member name="_parent" type="AnimationPlayer" setter="" getter="" default="null">
+		</member>
+	</members>
+</class>

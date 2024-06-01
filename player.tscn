@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvfsljiavtprd"]
+
+[ext_resource type="Script" path="res://PlayerMovement.cs" id="1_kp5e5"]
+[ext_resource type="Texture2D" uid="uid://bh07eqaadg84r" path="res://testplr.png" id="2_auc8l"]
+[ext_resource type="Script" path="res://addons/MultiplayCore/synchronizers/MPTransformSync.gd" id="3_4dtul"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ffug"]
+radius = 28.0
+height = 60.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kp5e5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_auc8l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3ffug")
+
+[node name="MPTransformSync" type="Node" parent="."]
+script = ExtResource("3_4dtul")

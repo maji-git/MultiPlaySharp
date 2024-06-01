@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;tests/assets/gdbot/gdbot_face.gd&quot;" inherits="Node2D">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_on_blink_timer_timeout">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_set_blinking">
+			<return type="void" />
+			<param index="0" name="value" type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="_set_eyes">
+			<return type="void" />
+			<param index="0" name="eyes_name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="_set_face">
+			<return type="void" />
+			<param index="0" name="face_name" type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="_animation_player" type="AnimationPlayer" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_blinking" type="Variant" setter="_set_blinking" getter="" default="null">
+		</member>
+		<member name="_blinking_timer" type="Timer" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_closed_eyes_timer" type="Timer" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_left_eye" type="Sprite2D" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="_right_eye" type="Sprite2D" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="current_face" type="Variant" setter="_set_face" getter="" default="null">
+		</member>
+		<member name="eyes_textures" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+	</members>
+</class>

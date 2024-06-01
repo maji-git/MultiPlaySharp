@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="&quot;tests/3d/PlayerController.gd&quot;" inherits="CharacterBody3D">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_on_handshake_ready">
+			<return type="void" />
+			<param index="0" name="hs" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_player_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_swap_focused">
+			<return type="void" />
+			<param index="0" name="_old_focus" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_on_swap_unfocused">
+			<return type="void" />
+			<param index="0" name="_new_focus" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_physics_process">
+			<return type="void" />
+			<param index="0" name="delta" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="cur_speed" type="Variant" setter="" getter="" default="2.0">
+		</member>
+		<member name="gdbot" type="GDbotSkin" setter="" getter="">
+		</member>
+		<member name="gravity" type="Variant" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+		<member name="mpp" type="MPPlayer" setter="" getter="" default="&lt;unknown&gt;">
+		</member>
+	</members>
+	<constants>
+		<constant name="SPEED" value="2.0">
+		</constant>
+		<constant name="SPRINT_SPEED" value="4.0">
+		</constant>
+		<constant name="JUMP_VELOCITY" value="4.5">
+		</constant>
+	</constants>
+</class>
